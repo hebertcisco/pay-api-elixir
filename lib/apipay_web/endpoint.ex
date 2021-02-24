@@ -7,7 +7,7 @@ defmodule ApipayWeb.Endpoint do
   @session_options [
     store: :cookie,
     key: "_apipay_key",
-    signing_salt: "Z2JK1YW9"
+    signing_salt: "DOkiqs6r"
   ]
 
   socket "/socket", ApipayWeb.UserSocket,

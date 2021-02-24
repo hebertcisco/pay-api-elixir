@@ -13,10 +13,14 @@ config :apipay,
 # Configures the endpoint
 config :apipay, ApipayWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "eDfkjEscvRx7Ar6GyNH1JcbXatYpgzYU6WoaLEAj4y7cyKpBltFW8N8L2bkT2xr0",
+  secret_key_base: "WNX8jMMZfjxNMaIViTlivlthYn+f3z4fiOGzlkBYyoImS/WJqWrovQTE1sfUMYce",
   render_errors: [view: ApipayWeb.ErrorView, accepts: ~w(json), layout: false],
   pubsub_server: Apipay.PubSub,
-  live_view: [signing_salt: "4VAhKAr0"]
+  live_view: [signing_salt: "crXkEFwd"]
+
+config :apipay, Apipay.Repo,
+  migration_primary_key: [type: :binary_id],
+  migration_foreign_key: [type: :binary_id]
 
 # Configures Elixir's Logger
 config :logger, :console,
